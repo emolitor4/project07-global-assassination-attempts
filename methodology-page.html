@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Methodology</title>
+  </head>
+  <body>
+    <div class="container" id="bsr-wrapper">
+      <h1>Methodology</h1>
+      <h4>Data to Information</h4>
+      <p>	Our project illuminates trends in global assassination attempts in 2019-2020. We examined the effect of countries’ politics, economics, and national security—among other factors—on the number of assassination attempts as well as the survival rate and prevention rate. The first data source we used was a dataset from Global Initiative’s “Global Assassination Monitor” that included an entry for every assassination attempted in 2019 and 2020. The dataset included information about each attempt as well as the country in which it occurred. Based on the country in which the assassination attempt occurred, we were able to cross reference the dataset with data on individual countries’ economies, political states, and quality of national security. From various research institutes such as the Heritage Foundation and the United Nations Development Programme, we extracted data on the individual countries. With the primary data source and our additional country-specific data sources, we created a master dataset. In this new Excel file, each row was a country and each column included information about the country as well as its number of assassinations, prevention rate, and survival rate among other statistics calculated in Excel based on the primary data source’s information. We then converted this Excel file to a CSV and imported it into Google Colab. Reading the data from the CSV file, we compiled the data into lists and then into a DataFrame. We used the DataFrame to create visualizations—ranging from dot plots and bar graphs to choropleth charts—using Plotly Express. From these visualizations, we were able to deduce insights about which macro factors had a sizable impact on the number of assassination attempts in each country. In addition, we were able to make conclusions about what factors yielded higher prevention and survival rates. </p>
+      <h4>Description of Data Source</h4>
+      <p>	Our primary data source is a dataset from Global Initiative’s “Global Assassination Monitor” project. The project tracks global assassinations and shares geographic and thematic insights. The data source is an Excel file with cells including plain text. Each row in the Excel file represents an assassination attempt that occurred in 2019 or 2020, and each column includes information about the attempt such as the country in which it occurred, the reported perpetrator, and whether the target survived. We chose this data source because it is easily readable and comprehensive in reporting every assassination attempt and the known information about it. Because the depth of information included about each attempt, we were able to cross reference the dataset with other data sources. We found county-specific data from the Heritage Foundation, Global Organized Crime Index, Index of Economic Freedom, United Nations Development Programme, and Michigan State University Global Edge. We incorporated this additional country-specific data so that we could analyze macro factors that might have impact the assassinations. Our final Excel spreadsheet included a row for each country and a column for each piece of information about the country as well as its number of assassinations, prevention rate, and survival rate among other statistics. </p>
+      <h4>Data Cleaning Process</h4>
+      <p> The data in the Excel spreadsheet was relatively clean to begin with. However, we needed to extract and modify the data such that it could be used for visualizations.
+First, we made sure that all of the cells in the spreadsheet were formatted as plain text rather than Accounting or Currency. We converted the file to a CSV and uploaded it to Google Colab. Next, we opened and read the file. We made lists for each column or category of information in the dataset. We iterated through the dataset, adding each piece of data to the appropriate list. While appending the data to the list, we made any necessary formatting changes such as changing the item to the float data type. Next, we compiled all of the separate data lists into one large data list. With this list, we created a DataFrame to display all of the data and use in the creation of visualizations. </p>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
